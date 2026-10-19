@@ -27,6 +27,14 @@ app.include_router(router)
 
 @app.get("/health")
 async def health_check():
+    @app.get("/api/stats")
+async def get_stats():
+    return {
+        "customers": 10000,
+        "products": 10000,
+        "orders": 10000,
+        "order_items": 20218
+    }
     """Health check endpoint"""
     return {"status": "healthy"}
 
