@@ -1,0 +1,172 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  background: #0b1020;
+  color: #edf2ff;
+}
+
+.dashboard {
+  max-width: 1200px;
+  margin: auto;
+  padding: 32px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid #28314a;
+}
+
+.brand-icon {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: #635bff;
+  font-weight: 800;
+}
+
+h1, h2, h3, p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 6px;
+  font-size: 21px;
+}
+
+.topbar p, .hero > p:last-child, .panel p {
+  color: #98a6c6;
+  margin-bottom: 0;
+}
+
+.status {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 24px;
+  padding: 9px 13px;
+  font-size: 13px;
+  background: #20283b;
+  white-space: nowrap;
+}
+
+.online {
+  color: #6ee7b7;
+}
+
+.offline {
+  color: #fda4af;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.hero {
+  padding: 48px 0 32px;
+}
+
+.eyebrow {
+  color: #a5a0ff;
+  font-size: 12px;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.hero h2 {
+  font-size: clamp(28px, 4vw, 42px);
+  margin-bottom: 12px;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.metric-card, .panel {
+  background: #131b2e;
+  border: 1px solid #28314a;
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.metric-card p {
+  color: #a6b2cc;
+  margin-bottom: 18px;
+}
+
+.metric-card h3 {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.metric-card span {
+  color: #8291b1;
+  font-size: 13px;
+}
+
+.panel {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.panel > div {
+  flex: 1;
+}
+
+.panel h2 {
+  margin-bottom: 8px;
+}
+
+.hint {
+  width: 100%;
+  color: #fbbf24 !important;
+}
+
+footer {
+  padding: 28px 0 8px;
+  color: #7785a4;
+  text-align: center;
+  font-size: 13px;
+}
+
+@media (max-width: 760px) {
+  .dashboard {
+    padding: 20px;
+  }
+
+  .topbar {
+    flex-wrap: wrap;
+  }
+
+  .status {
+    margin-left: 0;
+  }
+
+  .metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 420px) {
+  .metrics {
+    grid-template-columns: 1fr;
+  }
+}
