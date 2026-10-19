@@ -2,3 +2,10 @@
 __pycache__/
 *.pyc
 .env
+.env
+**/.env
+**/.venv/
+**/node_modules/
+**/dist/
+__pycache__/
+*.pyc
